@@ -1,0 +1,189 @@
+/* Colors */
+
+$crfc-blue: #00509f;
+$crfc-blue-dark: #1b4692;
+$light-blue: #74b9fe;
+$seamless: #fcb600;
+$premi: #01acbb;
+$white: #ffffff;
+$grey: #838383;
+$light-grey: #f5f5f5;
+$medium-grey: #c7c8ca;
+$dark-grey: #3c3b3b;
+$black: #000000;
+
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap');
+@import url('https://use.typekit.net/rct8ufq.css');
+@mixin title-font($color: $white) {
+    color: $color;
+    font-size: 75px;
+    font-family: eurostile, sans-serif;
+    line-height: 72px;
+}
+
+@mixin body-link($size: 18px) {
+    font-size: $size;
+    font-family: eurostile, sans-serif;
+    font-weight: 900;
+}
+
+@mixin body-copy($color: $grey,
+$weight: normal) {
+    color: $color;
+    font-weight: $weight;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 18px;
+}
+
+@mixin subheading($color: $crfc-blue,
+$weight: 900,
+$size: 45px) {
+    font-family: eurostile, sans-serif;
+    color: $color;
+    font-size: $size;
+    font-weight: $weight;
+}
+
+@font-face {
+    font-family: 'Klavika';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Klavika'), url('https://fonts.cdnfonts.com/s/63769/Klavika%20Regular.woff') format('woff');
+}
+
+
+/* Main Content CSS */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrap {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.seamless {
+    color: $seamless;
+}
+
+.premi {
+    color: $premi;
+}
+
+.tek {
+    color: $white;
+}
+
+.crfc-blue {
+    color: $crfc-blue;
+}
+
+.arrow-small {
+    font-size: 16px;
+    padding-left: 3px;
+}
+
+.arrow-medium {
+    font-size: 25px;
+    padding-left: 3px;
+    position: relative;
+    top: 4px;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+// btn-blue is a $white button with $crfc-dark-blue border that turns solid $crfc-dark-blue on hover
+.btn-blue {
+    border: 2px solid $crfc-blue-dark;
+    border-radius: 3px;
+    padding: 8px;
+    background-color: $white;
+    text-decoration: none !important;
+    font-family: eurostile, sans-serif;
+    font-size: 18px;
+    display: block; // Can set width and height for individual use cases
+    border-radius: 3px;
+}
+
+.btn-blue:hover {
+    transition: all 0.3s ease-in-out;
+    background-color: $crfc-blue-dark;
+    color: $white;
+    text-decoration: none !important;
+}
+
+a.btn-blue {
+    color: $crfc-blue-dark;
+}
+
+// btn-blue-alt is a $crfc-blue button that turns $white with $crfc-blue border on hover
+.btn-blue-alt {
+    padding: 8px;
+    background-color: $crfc-blue;
+    border: 2px solid $crfc-blue;
+    text-decoration: none !important;
+    font-family: eurostile, sans-serif;
+    font-size: 18px;
+    display: block; // Can set width and height for individual use cases
+    border-radius: 3px;
+}
+
+.btn-blue-alt:hover {
+    transition: all 0.3s ease-in-out;
+    background-color: $white;
+    color: $crfc-blue-dark;
+    text-decoration: none !important;
+}
+
+a.btn-blue-alt {
+    color: $white;
+}
+
+// btn-white is a - surprise - $white button with $crfc-blue-dark text that turns $medium-grey on hover
+.btn-white {
+    padding: 8px;
+    background-color: $white;
+    border: 2px solid $white;
+    text-decoration: none !important;
+    font-family: eurostile, sans-serif;
+    font-size: 18px;
+    text-align: center;
+    display: block; // Can set width and height for individual use cases
+    border-radius: 3px;
+}
+
+.btn-white:hover {
+    transition: all 0.3s ease-in-out;
+    background-color: $medium-grey;
+    border: 2px solid $medium-grey;
+    text-decoration: none !important;
+}
+
+a.btn-white {
+    color: $crfc-blue-dark;
+}
